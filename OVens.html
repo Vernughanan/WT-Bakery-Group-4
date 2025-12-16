@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oven Story - Fresh Baked Goods Daily</title>
+    <link rel="stylesheet" href="OVens.css">
+    <link rel="icon" type="image/png" href="/images/Oven_story.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Dancing+Script:wght@400;700&display=swap');
+        
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav class="navbar" id="navbar">
+                <div class="menu-toggle" id="menu-toggle">
+                    <span class="bars-icon"></span>
+                    <span class="times-icon"></span>
+                </div>
+                <a href="#" class="logo" onclick="showPage('home'); return false;"><img class="logo1" src="/images/Oven_story.png" alt="Oven_story-Logo" title="Home"></a>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" data-page="home" onclick="showPage('home'); return false;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-page="about" onclick="showPage('about'); return false;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-page="products" onclick="showPage('products'); return false;">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-page="recently-added" onclick="showPage('recently-added'); return false;">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-page="newsletter" onclick="showPage('newsletter'); return false;">Newsletter</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page-container">
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <h1 class="headline">Freshly Baked Every Day</h1>
+                <p style="color: white; font-size: 1.8rem; margin-bottom: 2rem; text-align: center;">From our oven to your home - Experience the warmth of freshly baked goods</p>
+                <a href="Order.html" target="_blank"> <button class="btn btn-primary">Order Now</button> </a>
+            </div>
+        </section>
+
+        <!-- FEATURED PRODUCTS SECTION -->
+        <section class="our-story">
+            <div class="container">
+                <div class="global-headline">
+                    <h2 class="sub-headline">Featured</h2>
+                    <h3 class="headline headline-dark">Today's Specials</h3>
+                    <div class="asterisk"></div>
+                </div>
+                <div class="row" style="margin-top: 4rem;">
+                    <div class="description padding-right">
+                        <h3 style="font-size: 2.2rem; margin-bottom: 1.5rem; color: #e1b164;">Artisan Sourdough Bread</h3>
+                        <p>Our signature sourdough, made with a 72-hour fermented starter. Crispy golden crust with a soft, tangy interior perfect for any meal.</p>
+                        <p><strong style="color: #e1b164; font-size: 1.8rem;">Rs.300</strong></p>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('products'); return false;">View All Products</a>
+                    </div>
+                    <div class="image">
+                        <img src="/images/Sourdough_Bread.jpg" alt="Artisan Sourdough Bread" class="story-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="always-fresh shared">
+            <div class="container">
+                <div class="global-headline">
+                    <h2 class="sub-headline">Always</h2>
+                    <h3 class="headline">Fresh & Delicious</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT PREVIEW SECTION -->
+        <section class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="image-group padding-right">
+                        <img src="/images/chocolate_crossiants.jpg" alt="Fresh Croissants">
+                        <img src="/images/ChocolateChip_Cookie.jpg" alt="Chocolate Cookies">
+                        <img src="/images/Matcha White Chocolate Cookie.jpg" alt="Blueberry Muffins">
+                        <img src="/images/Red_Velvet_Cake.jpg" alt="Decorated Cake">
+                    </div>
+                    <div class="description">
+                        <div class="global-headline">
+                            <h2 class="sub-headline">Discover</h2>
+                            <h3 class="headline headline-dark">Our Story</h3>
+                            <div class="asterisk"></div>
+                        </div>
+                        <p>At Oven Story, we believe in the magic of freshly baked goods. Every morning, our bakers craft artisan bread, pastries, and treats using traditional recipes and premium ingredients.</p>
+                        <p>From our family to yours, we bring warmth and flavor to your table.</p>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('about'); return false;">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALITY PROMISE -->
+        <section class="tasty shared">
+            <div class="container">
+                <div class="global-headline">
+                    <h2 class="sub-headline">Premium</h2>
+                    <h3 class="headline">Quality Ingredients</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW ARRIVALS PREVIEW -->
+        <section class="delight">
+            <div class="container">
+                <div class="row">
+                    <div class="description padding-right">
+                        <div class="global-headline">
+                            <h2 class="sub-headline">Freshly</h2>
+                            <h3 class="headline headline-dark">New Arrivals</h3>
+                            <div class="asterisk"></div>
+                        </div>
+                        <p>Check out our latest creations! We're constantly experimenting with new flavors and seasonal specials. This week's highlights include:</p>
+                        <ul style="margin-left: 2rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 1rem;">🥐 Chocolate Almond Croissants</li>
+                            <li style="margin-bottom: 1rem;">🍪 Salted Caramel Cookies</li>
+                            <li style="margin-bottom: 1rem;">🧁 Lemon Blueberry Muffins</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('recently-added'); return false;">See All New Items</a>
+                    </div>
+                    <div class="delight-images">
+                        <img src="/images/Almond_Danish.jpg" alt="Fresh Croissants">
+                        <img src="/images/French_Baguette.jpeg" alt="Muffins">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" class="page-container hidden">
+        <section class="hero small-size-hero">
+            <div class="container">
+                <h1 class="headline" style="margin-top: 50px; margin-left: 50px;">About Us</h1>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="global-headline">
+                    <h2 class="sub-headline">Our</h2>
+                    <h3 class="headline headline-dark">Story</h3>
+                    <div class="asterisk"></div>
+                </div>
+
+                <div style="max-width: 80rem; margin: 4rem auto;">
+                    <div style="background: linear-gradient(135deg, #FFE4B5 0%, #F0E68C 100%); padding: 4rem; border-radius: 1rem; margin-bottom: 4rem;">
+                        <h3 style="font-size: 2.5rem; color: #252525; margin-bottom: 2rem;">Our Journey</h3>
+                        <p style="color: #252525; margin-bottom: 2rem;">Oven Story was founded in 2015 with a simple mission: to bring the joy of freshly baked goods to our community. What started as a small family bakery has grown into a beloved local destination for quality artisan breads, pastries, and desserts.</p>
+                        <p style="color: #252525;">Our founder, Ravisha Santos, learned the art of baking from her grandmother in a small village in Kalutara. She brought those time-honored recipes and techniques to create Oven Story, blending traditional methods with modern flavors.</p>
+                    </div>
+
+                    <div class="row" style="gap: 2rem; margin-bottom: 4rem;">
+                        <div style="background: #e1b164; padding: 3rem; border-radius: 1rem; color: white;">
+                            <h4 style="font-size: 2rem; margin-bottom: 1.5rem;">Our Mission</h4>
+                            <p>To create exceptional baked goods using premium ingredients, traditional techniques, and a whole lot of love. We're committed to bringing warmth and comfort to every customer's table.</p>
+                        </div>
+                        <div style="background: #CD853F; padding: 3rem; border-radius: 1rem; color: white;">
+                            <h4 style="font-size: 2rem; margin-bottom: 1.5rem;">Our Values</h4>
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: 1rem;">✓ Quality ingredients only</li>
+                                <li style="margin-bottom: 1rem;">✓ Traditional baking methods</li>
+                                <li style="margin-bottom: 1rem;">✓ Community focused</li>
+                                <li style="margin-bottom: 1rem;">✓ Sustainable practices</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #FFEFD5 0%, #FFE4B5 100%); padding: 4rem; border-radius: 1rem;">
+                        <h3 style="font-size: 2.5rem; color: #252525; margin-bottom: 3rem; text-align: center;">What Makes Us Special</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <span class="icon">🌾</span>
+                                <h4>Premium Ingredients</h4>
+                                <p>We source only the finest organic flour, butter and ingredients.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="icon">👨‍🍳</span>
+                                <h4>Expert Bakers</h4>
+                                <p>Our team has over 50 years of combined baking experience.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="icon">❤️</span>
+                                <h4>Made with Love</h4>
+                                <p>Every item is handcrafted with care and attention to detail.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="icon">🌏</span>
+                                <h4>Locally Inspired, Globally Loved</h4>
+                                <p>From classic French baguettes to Sri Lankan twists on cookies, our menu celebrates flavor without borders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PRODUCTS PAGE -->
+    <div id="page-products" class="page-container hidden">
+        <section class="hero small-size-hero">
+            <div class="container">
+                <h1 class="headline" style="margin-top: 50px; margin-left: 50px;">Our Products</h1>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="global-headline">
+                    <h2 class="sub-headline">Fresh</h2>
+                    <h3 class="headline headline-dark">Baked Daily</h3>
+                    <div class="asterisk"></div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="/images/Sourdough_Bread.jpg" alt="Artisan Sourdough">
+                        <div class="product-info">
+                            <h4>Artisan Sourdough</h4>
+                            <p>72-hour fermented starter, crispy crust</p>
+                            <p class="price">Rs.300.00</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/chocolate_crossiants.jpg" alt="Chocolate Croissant">
+                        <div class="product-info">
+                            <h4>Chocolate Croissant</h4>
+                            <p>Flaky layers with premium chocolate</p>
+                            <p class="price">Rs.150</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/Blueberry_Muffin.jpg" alt="Blueberry Muffin">
+                        <div class="product-info">
+                            <h4>Blueberry Muffin</h4>
+                            <p>Fresh blueberries, moist and fluffy</p>
+                            <p class="price">Rs.100</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/Cinnamon_Roll.jpg" alt="Cinnamon Roll">
+                        <div class="product-info">
+                            <h4>Cinnamon Roll</h4>
+                            <p>Warm, gooey, cream cheese frosting</p>
+                            <p class="price">Rs.150</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/ChocolateChip_Cookie.jpg" alt="Chocolate Chip Cookie">
+                        <div class="product-info">
+                            <h4>Chocolate Chip Cookie</h4>
+                            <p>Chewy center, crispy edges</p>
+                            <p class="price">Rs.90</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/French_Baguette.jpeg" alt="French Baguette">
+                        <div class="product-info">
+                            <h4>French Baguette</h4>
+                            <p>Classic French bread, crispy crust</p>
+                            <p class="price">Rs.200</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/Red_Velvet_Cake.jpg" alt="Red Velvet Cake">
+                        <div class="product-info">
+                            <h4>Red Velvet Cake</h4>
+                            <p>Rich cocoa, cream cheese frosting</p>
+                            <p class="price">Rs.650</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/Almond_Danish.jpg" alt="Almond Danish">
+                        <div class="product-info">
+                            <h4>Almond Danish</h4>
+                            <p>Buttery pastry with almond filling</p>
+                            <p class="price">Rs.250</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/Lemon-tart.jpg" alt="Lemon Tart">
+                        <div class="product-info">
+                            <h4>Lemon Tart</h4>
+                            <p>Tangy lemon curd, buttery crust</p>
+                            <p class="price">Rs.350</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/Salted Caramel Cookie.jpg" alt="Salted Caramel Cookie">
+                        <div class="product-info">
+                            <h4>Salted Caramel Cookie</h4>
+                            <p>Sweet caramel swirls with a hint of salt</p>
+                            <p class="price">Rs.150</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <span class="product-tag" style="background: #f39c12;">LIMITED</span>
+                        <img src="/images/Pistachio_Eclair.jpg" alt="Pistachio Éclair">
+                        <div class="product-info">
+                            <h4>Pistachio Eclair</h4>
+                            <p>Delicate choux filled with pistachio cream</p>
+                            <p class="price">Rs.350</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="/images/Matcha White Chocolate Cookie.jpg" alt="Matcha White Chocolate Cookie">
+                        <div class="product-info">
+                            <h4>Matcha White Chocolate Cookie</h4>
+                            <p>Earthy matcha meets creamy white chocolate</p>
+                            <p class="price">Rs.150</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <span class="product-tag" style="background: #27ae60;">SEASONAL</span>
+                        <img src="/images/Strawberry Cream Danish.jpg" alt="Strawberry Cream Danish">
+                        <div class="product-info">
+                            <h4>Strawberry Cream Danish</h4>
+                            <p>Flaky pastry topped with fresh strawberries and cream</p>
+                            <p class="price">Rs.250</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- NEW ARRIVALS PAGE -->
+    <div id="page-recently-added" class="page-container hidden">
+        <section class="hero small-size-hero">
+            <div class="container">
+                <h1 class="headline" style="margin-top: 50px; margin-left: 50px;">New Arrivals</h1>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="global-headline">
+                    <h2 class="sub-headline">Freshly</h2>
+                    <h3 class="headline headline-dark">New Arrivals</h3>
+                    <div class="asterisk"></div>
+                </div>
+
+                <div style="background: #e1b164; color: white; padding: 3rem; border-radius: 1rem; text-align: center; margin: 4rem 0;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 2rem;">This Week's Highlights</h3>
+                    <p style="font-size: 1.8rem;">🥐 Chocolate Almond Croissants  •  🍪 Salted Caramel Cookies  •  🧁 Lemon Blueberry Muffins</p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <span class="product-tag">NEW</span>
+                        <img src="/images/chocolate_crossiants.jpg" alt="Chocolate Almond Croissant">
+                        <div class="product-info">
+                            <h4>Chocolate Almond Croissant</h4>
+                            <p class="price">Rs.350</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <span class="product-tag">NEW</span>
+                        <img src="/images/Salted Caramel Cookie.jpg" alt="Salted Caramel Cookie">
+                        <div class="product-info">
+                            <h4>Salted Caramel Cookie</h4>
+                            <p class="price">Rs.150</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <span class="product-tag">NEW</span>
+                        <img src="/images/Blueberry_Muffin.jpg" alt="Lemon Blueberry Muffin">
+                        <div class="product-info">
+                            <h4>Blueberry Muffin</h4>
+                            <p class="price">Rs.150</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <span class="product-tag" style="background: #f39c12;">LIMITED</span>
+                        <img src="/images/Pistachio_Eclair.jpg" alt="Pistachio Éclair">
+                        <div class="product-info">
+                            <h4>Pistachio Eclair</h4>
+                            <p class="price">Rs.350</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <span class="product-tag">NEW</span>
+                        <img src="/images/Matcha White Chocolate Cookie.jpg" alt="Matcha White Chocolate Cookie">
+                        <div class="product-info">
+                            <h4>Matcha White Chocolate Cookie</h4>
+                            <p class="price">Rs.150</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <span class="product-tag" style="background: #27ae60;">SEASONAL</span>
+                        <img src="/images/Strawberry Cream Danish.jpg" alt="Strawberry Cream Danish">
+                        <div class="product-info">
+                            <h4>Strawberry Cream Danish</h4>
+                            <p class="price">Rs.250</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- NEWSLETTER PAGE -->
+    <div id="page-newsletter" class="page-container hidden">
+        <section class="hero small-size-hero">
+            <div class="container">
+                <h1 class="headline" style="margin-top: 50px; margin-left: 50px;">Newsletter</h1>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="global-headline">
+                    <h2 class="sub-headline">Stay</h2>
+                    <h3 class="headline headline-dark">Connected</h3>
+                    <div class="asterisk"></div>
+                </div>
+
+                <p style="text-align: center; font-size: 1.8rem; margin: 3rem auto; max-width: 60rem;">
+                    Subscribe to our newsletter for exclusive offers, new product launches, and baking tips!
+                </p>
+
+                <div class="benefits-grid" style="margin: 4rem 0;">
+                    <div class="benefit-item">
+                        <span class="icon">📧</span>
+                        <h4>Weekly Updates</h4>
+                        <p>Get the latest news about new products and special offers</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="icon">🎁</span>
+                        <h4>Exclusive Deals</h4>
+                        <p>Subscriber-only discounts and promotions</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="icon">🎂</span>
+                        <h4>Birthday Surprise</h4>
+                        <p>Special treat on your birthday</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="icon">🍪</span>
+                        <h4>Baking Tips</h4>
+                        <p>Professional tips and recipes from our bakers</p>
+                    </div>
+                </div>
+
+                <div class="newsletter-subscribe">
+                    <h3 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: var(--main-font-color-dark);">Subscribe Now</h3>
+                    
+                    <div class="form-group">
+                        <label for="sub-name">Full Name *</label>
+                        <input type="text" id="sub-name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sub-email">Email Address *</label>
+                        <input type="email" id="sub-email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sub-birthday">Birthday (Optional)</label>
+                        <input type="date" id="sub-birthday">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="sub-agree" required>
+                        <label for="sub-agree">I agree to receive marketing emails and understand I can unsubscribe at any time.</label>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%; padding: 1.5rem; font-size: 1.6rem;" onclick="handleSubscribe()">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="back-to-top" id="back-to-top" onclick="scrollToTop()"></div>
+            <div class="footer__content">
+                <div class="footer__content-about">
+                    <h4>About Oven Story</h4>
+                    <div class="asterisk"></div>
+                    <p>We are a local bakery committed to bringing you the freshest baked goods made with love and the finest ingredients. Visit us today and taste the difference!</p>
+                </div>
+                <div class="footer__content-divider">
+                    <!-- CONTACT SECTION -->
+                    <div class="contact-info">
+                        <h4>Contact Us</h4>
+                        <p style="margin-bottom: 1rem;"><span class="icon">📍</span>55/1, Alwis Mawatha, Pangiriwatta Road, Gangodawila, Nugegoda.</p>
+                        <p style="margin-bottom: 1rem;"><span class="icon">📞</span>071-123-4567</p>
+                        <p style="margin-bottom: 1rem;"><span class="icon">✉️</span>hello@ovenstory.com</p>
+                        <p style="margin-bottom: 1rem;"><span class="icon">🕐</span>Mon-Sat: 6AM - 8PM | Sun: 6AM - 5PM</p>
+                    </div>
+                    
+                    <!-- SOCIAL MEDIA -->
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <ul class="social-icons">
+                            <li><a href="#" aria-label="Facebook">f</a></li>
+                            <li><a href="#" aria-label="Twitter">𝕏</a></li>
+                            <li><a href="#" aria-label="Instagram">📷</a></li>
+                            <li><a href="#" aria-label="Pinterest">P</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- NEWSLETTER -->
+                    <div class="newsletter-container">
+                        <h4>Newsletter</h4>
+                        <p style="font-size: 1.3rem; margin-bottom: 1.5rem;">Stay updated with our latest offers!</p>
+                        <div class="newsletter-form-box">
+                            <input type="email" id="footer-email" class="newsletter-input" placeholder="Your email address...">
+                            <button class="newsletter-btn" type="button" onclick="handleFooterNewsletter()">→</button>
+                        </div>
+                        <p style="font-size: 1.2rem; margin-top: 1rem;"><a href="#" style="color: #e1b164;" onclick="showPage('newsletter'); return false;">Learn more about our newsletter</a></p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 1.3rem;">&copy; 2024 Oven Story. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="OVens.js"></script>
+</body>
+</html>
