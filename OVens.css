@@ -179,7 +179,7 @@
         .hero {
             width: 100%;
             height: 100vh;
-            background: url('/images/bakery_cover.jpg') center/cover;
+            background: url('images/bakery_cover.jpg') center/cover;
             display: flex;
             align-items: center;
             position: relative;
@@ -333,7 +333,7 @@
 
         /* ALWAYS FRESH */
         .always-fresh {
-            background: url('/images/bakery2.jpg') center/cover;
+            background: url('images/bakery2.jpg') center/cover;
         }
 
         .shared {
@@ -383,7 +383,7 @@
 
         /* TASTY SECTION */
         .tasty {
-            background: url('/images/Bakery-Ingredients.jpg') center/cover;
+            background: url('images/Bakery-Ingredients.jpg') center/cover;
         }
 
         /* PRODUCTS GRID */
