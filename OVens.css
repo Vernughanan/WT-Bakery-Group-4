@@ -650,10 +650,16 @@
         footer {
             background-color: var(--dark-bg);
             color: var(--white-color);
-            padding: 7rem 0 5rem;
+            padding: 7rem 0 1.5rem;
             position: relative;
             text-align: center;
         }
+
+        footer .container {
+    max-width: 1200px; /* Increase this number to spread content further apart */
+    margin: 0 auto;    /* Keeps the entire footer centered */
+    padding: 0 10px;   /* Minimal side padding for mobile responsiveness */
+}
 
         .back-to-top {
             background-color: var(--dark-bg);
@@ -694,29 +700,101 @@
             margin-bottom: 3rem;
         }
 
+        .footer__content-divider {
+    display: flex;
+    justify-content: space-between; /* Evenly distributes the 3 columns */
+    align-items: flex-start;
+    gap: 80px; /* Adjust this to control the space between columns */
+    flex-wrap: wrap; /* Ensures it looks good on smaller screens */
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 2rem 0 auto;
+    padding: 0 10px;
+}
+
         footer .asterisk {
             color: var(--secondary-font-color);
-            margin: 2.4rem;
+            margin: 0.4rem;
+            font-size: 1.2rem;
+            text-align: center;
         }
 
         .footer__content-about {
-            margin-bottom: 5.4rem;
+            margin-bottom: 1rem;
         }
 
         .footer__content-about p {
-            line-height: 1.8;
+            line-height: 1.6;
+            margin-top: 0.5rem;
         }
 
+        .footer__content-about h4 {
+    margin-bottom: 0.5rem; /* Reduced from 3rem to bring asterisk closer */
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Base style for all contact icons */
+.contact-icon {
+    margin-right: 15px;
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Specific Colors for each Icon */
+.icon-location {
+    color: #EA4335; /* Google Maps Red */
+}
+
+.icon-phone {
+    color: #25D366; /* WhatsApp/Phone Green */
+}
+
+.icon-email {
+    color: #FBBC05; /* Google/Gmail Yellow-Gold */
+}
+
+.icon-clock {
+    color: #4285F4; /* Standard Information Blue */
+}
+
+/* Ensure text remains readable and aligned */
+.contact-info p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 15px;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #ffffff; /* Keeping text white for contrast */
+}
+
+.contact-info p:hover .contact-icon {
+    transform: scale(1.2); /* Slight pop effect on hover */
+}
+
 /* Base style for all social icons */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* Centers the H4 and icons vertically */
+}
 
 .social-icons {
     display: flex;            /* Aligns children in a row */
     flex-direction: row;      /* Ensures they stay side-by-side */
-    justify-content: center;   /* Centers them under the 'FOLLOW US' text */
+     justify-content: center; /*   Centers them under the 'FOLLOW US' text */
     gap: 15px;                /* Adds even spacing between each icon */
     list-style: none;         /* Removes bullet points if using <ul> */
     padding: 0;
-    margin: 20px 0;           /* Adds spacing above and below the row */
+    margin-top: 10px;           /* Adds spacing above and below the row */
 }
 
 .social-icons li a {
@@ -764,6 +842,11 @@
             max-width: 40rem;
             margin: 0 auto;
         }
+
+        .newsletter-container {
+    flex: 1.5; 
+    text-align: left;
+}
 
         .newsletter-input {
             width: 100%;
@@ -957,7 +1040,7 @@
             }
 
             .footer__content {
-                max-width: 77.5rem;
+                max-width: 1200px;
                 margin: auto;
             }
 
@@ -967,16 +1050,33 @@
             }
 
             .footer__content-divider {
-                display: flex;
-                justify-content: space-between;
-            }
+    display: flex;
+    flex-direction: row;      /* Ensures side-by-side alignment */
+    justify-content: space-between;   /* Centers the three columns as a group */
+    align-items: flex-start;  /* Aligns the headers (H4) at the same top level */
+    gap: 4rem;                /* Controls the exact space between the three columns */
+    width: 1100px;        /* Prevents the footer from becoming "too big" on wide screens */
+    margin: 4rem auto 0;      /* Centers the entire block and adds top spacing */
+    padding: 0;
+}
+
+            .footer__content-divider h4 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
 
             .social-media,
             .newsletter-container,
             .contact-info {
-                width: 100%;
-                max-width: 27.3rem;
-                margin: 0 1rem;
+                
+                max-width: 35rem;
+                min-width: 250px;
+                margin: 0;
+                flex: 1; /* Allows each column to grow and fill available space */
+                text-align: center;
             }
 
             .products-grid {
