@@ -38,6 +38,9 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link" data-page="newsletter" onclick="showPage('newsletter'); return false;">Newsletter</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="btn-signin" onclick="handleSignIn(); return false;">Sign In</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -556,6 +559,64 @@
             </div>
         </div>
     </footer>
+
+    <div id="signInModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeSignIn()">&times;</span>
+        
+        <div id="login-view">
+    <div class="modal-header">
+        <img src="images/Oven_story.png" alt="Logo" style="width: 50px; margin-bottom: 1rem;">
+        <h2>Sign In</h2>
+        <p>Welcome back to Oven Story!</p>
+    </div>
+    <form class="modal-form" onsubmit="event.preventDefault(); alert('Login Successful!'); closeSignIn();">
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">SIGN IN</button>
+    </form>
+    
+    <p class="forgot-password">
+        <a href="#" onclick="alert('Password reset link sent to your email!')">Forgot Password?</a>
+    </p>
+
+    <p class="modal-footer-text">
+        Don't have an account? <a href="#" onclick="toggleAuth('signup')">Sign Up</a>
+    </p>
+</div>
+
+        <div id="signup-view" class="hidden">
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <p>Join us for fresh daily updates!</p>
+            </div>
+            <form class="modal-form" onsubmit="event.preventDefault(); alert('Account Created!'); closeSignIn();">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+            </form>
+            <p class="modal-footer-text">
+                Already have an account? <a href="#" onclick="toggleAuth('login')">Sign In</a>
+            </p>
+        </div>
+    </div>
+</div>
 
     <script src="OVens.js"></script>
 </body>

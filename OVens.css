@@ -175,6 +175,171 @@
             color: var(--secondary-font-color);
         }
 
+        /* Sign In Button Styling */
+.btn-signin {
+    background-color: #e1b164; /* Matching your gold/yellow theme */
+    color: #252525 !important; /* Dark text for contrast */
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.btn-signin:hover {
+    background-color: transparent;
+    border-color: #e1b164;
+    color: #e1b164 !important;
+    transform: translateY(-2px);
+}
+
+/* Ensure navbar centers items correctly with the new button */
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive adjustment for mobile menu */
+@media screen and (max-width: 768px) {
+    .btn-signin {
+        margin: 1rem 0;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* Modal Background Overlay */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+
+/* The actual small window */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 3rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 420px; /* Adjusted size for a clean look */
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    animation: modalFadeIn 0.4s;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Close Button (X) */
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #e1b164;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-header h2 {
+    color: #252525;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-top: 1rem;
+}
+
+.modal-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.modal-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Footer Link Styling (The "Don't have an account?" part) */
+.modal-footer-text {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: #666;
+}
+
+.modal-footer-text a {
+    color: #e1b164;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Visibility Helper */
+.hidden {
+    display: none !important;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.forgot-password a {
+    color: #888; /* Subtle gray color */
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #e1b164; /* Changes to theme gold on hover */
+    text-decoration: underline;
+}
+
+/* Ensure the footer text has a smaller top margin now that we've added a link above it */
+.modal-footer-text {
+    margin-top: 1rem;
+}
+
         /* HERO SECTION */
         .hero {
             width: 100%;
